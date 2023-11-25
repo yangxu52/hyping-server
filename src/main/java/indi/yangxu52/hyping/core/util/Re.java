@@ -4,6 +4,8 @@ import indi.yangxu52.hyping.core.constant.ResponseCode;
 import indi.yangxu52.hyping.core.entity.ResponseBody;
 
 /**
+ * 想用工具类
+ *
  * @author yangxu52
  * @Date 2023/11/17
  */
