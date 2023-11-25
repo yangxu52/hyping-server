@@ -1,5 +1,7 @@
 package indi.yangxu52.hyping.core.entity;
 
+import lombok.NonNull;
+
 import java.util.List;
 
 /**
@@ -41,5 +43,5 @@ public interface TreeList<I, T> {
      * @param id ID1
      * @return 是否相等
      */
-    public boolean compare(T id);
+    public boolean compare(@NonNull T id);
 }

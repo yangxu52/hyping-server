@@ -5,20 +5,21 @@ package indi.yangxu52.hyping.core.constant;
  * @Date 2023/11/17
  */
 public class ResponseCode {
-    /**
-     * 成功
+
+    /*
+     * 操作成功
      */
     public static final Integer SUCCESS = 200;
     /**
-     * 失败
+     * 系统内部错误
      */
     public static final Integer ERROR = 500;
     /**
-     * 未认证
+     * 未授权
      */
-    public static final Integer UNAUTHORIZED = 500;
+    public static final Integer UNAUTHORIZED = 401;
     /**
-     * 权限不足
+     * 访问受限，授权过期
      */
-    public static final Integer FORBIDDEN = 500;
+    public static final Integer FORBIDDEN = 403;
 }

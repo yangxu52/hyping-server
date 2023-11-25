@@ -3,7 +3,6 @@ package indi.yangxu52.hyping.core.util;
 import indi.yangxu52.hyping.core.entity.TreeList;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
