@@ -13,6 +13,7 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -48,6 +49,9 @@ public class JacksonConfig {
         timeModule.addDeserializer(LocalDateTime.class, localDateTimeDeserializer);
         timeModule.addSerializer(LocalDateTime.class, localDateTimeSerializer);
 
-        return Jackson2ObjectMapperBuilder.json().modules(timeModule).featuresToDisable(SerializationFeature.FAIL_ON_EMPTY_BEANS).featuresToDisable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES).featuresToDisable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS).build();
+        return Jackson2ObjectMapperBuilder.json().modules(timeModule)
+                                          .featuresToDisable(SerializationFeature.FAIL_ON_EMPTY_BEANS)
+                                          .featuresToDisable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
+                                          .featuresToDisable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS).build();
     }
 }
